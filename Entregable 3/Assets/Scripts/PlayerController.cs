@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public void ScaleToDirection(KeyCode key, Vector3 axis)
+    public void Scale(KeyCode key, Vector3 axis)
     {
         if (Input.GetKeyDown(key))
         {
@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void RotateToDirection(KeyCode key, Vector3 axis)
+    public void Rotation(KeyCode key, Vector3 axis)
     {
         if (Input.GetKeyDown(key))
         {
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScaleToDirection(KeyCode.W, Vector3.one);
-        RotateToDirection(KeyCode.R, new Vector3(45, 0, 45));
+        Scale(KeyCode.W, Vector3.one);
+        Rotation(KeyCode.R, new Vector3(45, 0, 45));
     }
 }
